@@ -1,4 +1,5 @@
-import 'package:calculator/profile.dart';
+// import 'package:calculator/profile.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 
@@ -9,7 +10,31 @@ class homeCal extends StatefulWidget {
   _homeCalState createState() => _homeCalState();
 }
 
-class _homeCalState extends State<homeCal> {
+class _homeCalState extends State<homeCal> with SingleTickerProviderStateMixin {
+
+  late AnimationController _controller;
+  late Animation<double> _scaleAnimation;
+
+
+
+  @override
+  void initState()
+  {
+    _controller = AnimationController(vsync: this ,duration: duration);
+    _scaleAnimation = Tween<double>(begin: 1 ,end: .6).animate(_controller);
+    super.initState();
+  }
+
+  @override
+  void dispose()
+  {
+    _controller.dispose();
+    super.dispose();
+  }
+
+
+
+
   String equation = "0";
   String result = "0";
   String expression = "";
@@ -18,6 +43,10 @@ class _homeCalState extends State<homeCal> {
   Color whiteColor = Colors.white;
   Color blackColor = Colors.black;
   Color swapColor = Colors.grey;
+  bool isCollapsed = true;
+  final Duration duration = const Duration(milliseconds: 400);
+  bool mode = true;
+
 
   buttonPressed(String buttonText) {
     setState(() {
@@ -82,133 +111,185 @@ class _homeCalState extends State<homeCal> {
         ? screenHeight * .105
         : 56.61600128173828;
 
-    return Scaffold(
-      backgroundColor: whiteColor,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: whiteColor,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> ProfilePage()));
-            },
-            icon: Icon(
-              Icons.blur_circular,
-              color: blackColor,
-            )),
-        title: Text(
-          "Calculator",
-          style: TextStyle(
-              color: blackColor, fontWeight: FontWeight.bold, fontSize: 20),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                setState(() {
-                  swapColor= blackColor;
-                  blackColor = whiteColor;
-                  whiteColor = swapColor;
-                });
-              },
-              icon: Icon(
-                blackColor==Colors.black?Icons.wb_sunny_outlined:Icons.wb_sunny,
-                color: blackColor,
-                size: 20,
-              ))
-        ],
-      ),
-      body: Padding(
-        padding:
-        const EdgeInsets.only(top: 8.0, right: 15, left: 15, bottom: 8),
-        child: SingleChildScrollView(
-          child: Column(
-            //mainAxisAlignment: MainAxisAlignment.start,
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: screenHeight * .09,
-              ),
-              Container(
-                width: screenWidth,
-                height: 70,
-                padding: EdgeInsets.only(right: screenWidth * .1),
-                alignment: Alignment.centerRight,
-                //color: Colors.grey,
-                child: Text(
-                  equation,
-                  style: TextStyle(
-                    fontSize: equationFontSize,
-                    color: blackColor,
-                    //fontWeight: FontWeight.bold,
+    return AnimatedPositioned(
+      duration: duration,
+      top:0,
+      bottom:0 ,
+      left:isCollapsed?0:.2*screenWidth ,
+      right:isCollapsed?0: -.4*screenWidth ,
+      child: ScaleTransition(
+        scale: _scaleAnimation,
+        child: GestureDetector(
+          onTap: (){
+            setState(() {
+              if(!isCollapsed)
+              {
+                _controller.reverse();
+                isCollapsed = !isCollapsed;
+              }
+
+            });
+          },
+          child: Material(
+            animationDuration: duration,
+            color: Colors.white,
+            clipBehavior: Clip.hardEdge,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+            ),
+            //elevation: 8,
+            child: Container(
+              child: Scaffold(
+                backgroundColor: whiteColor,
+                appBar: AppBar(
+                  elevation: 0,
+                  backgroundColor: whiteColor,
+                  leading: IconButton(
+
+                      onPressed: () {
+                        setState(() {
+                          if(isCollapsed)
+                          {
+                            _controller.forward();
+                          }
+                          else{
+                            _controller.reverse();
+                          }
+                          isCollapsed = !isCollapsed;
+                        });
+
+                      },
+                      icon: Icon(
+                        Icons.menu,
+                        color: blackColor,
+                      ),
+                      tooltip: "Menu Bar"
                   ),
-                ),
-              ),
-              Container(
-                height: screenHeight * .007,
-              ),
-              Container(
-                width: screenWidth,
-                height: 70,
-                padding: EdgeInsets.only(right: screenWidth * .1),
-                alignment: Alignment.centerRight,
-                //color: Colors.grey,
-                child: Text(
-                  result,
-                  style: TextStyle(
-                    fontSize: resultFontSize,
-                    color: blackColor,
-                    //fontWeight: FontWeight.bold,
+                  title: Text(
+                    "Calculator",
+                    style: TextStyle(
+                        color: blackColor, fontWeight: FontWeight.bold, fontSize: 20),
                   ),
+                  actions: [
+                    IconButton(
+                        onPressed: () {
+                          setState(() {
+                            mode=!mode;
+                            swapColor= blackColor;
+                            blackColor = whiteColor;
+                            whiteColor = swapColor;
+                          });
+                        },
+                        icon: Icon(
+                          blackColor==Colors.black?Icons.wb_sunny_outlined:Icons.wb_sunny,
+                          color: blackColor,
+                          size: 20,
+                        ),
+                        tooltip: "Light/Dark Mode"
+                    )
+                  ],
                 ),
-              ),
-              Container(
-                height: screenHeight * .03,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: screenWidth * .90,
-                    child: Table(
-                      children: [
-                        TableRow(children: [
-                          Button("c", buttonSizev),
-                          Button("%", buttonSizev),
-                          Button("+-", buttonSizev),
-                          Button("/", buttonSizev),
-                        ]),
-                        TableRow(children: [
-                          Button("7", buttonSizev),
-                          Button("8", buttonSizev),
-                          Button("9", buttonSizev),
-                          Button("x", buttonSizev),
-                        ]),
-                        TableRow(children: [
-                          Button("4", buttonSizev),
-                          Button("5", buttonSizev),
-                          Button("6", buttonSizev),
-                          Button("-", buttonSizev),
-                        ]),
-                        TableRow(children: [
-                          Button("1", buttonSizev),
-                          Button("2", buttonSizev),
-                          Button("3", buttonSizev),
-                          Button("+", buttonSizev),
-                        ]),
-                        TableRow(children: [
-                          ButtonCon("", buttonSizev),
-                          Button("0", buttonSizev),
-                          Button(".", buttonSizev),
-                          ButtonBon("", buttonSizev)
-                        ]),
-                      ],
+                body: Padding(
+                  padding:
+                  const EdgeInsets.only(top: 8.0, right: 15, left: 15, bottom: 8),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        //mainAxisAlignment: MainAxisAlignment.start,
+                        //crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: screenHeight * .09,
+                          ),
+                          Container(
+                            width: screenWidth,
+                            height: 70,
+                            padding: EdgeInsets.only(right: screenWidth * .1),
+                            alignment: Alignment.centerRight,
+                            //color: Colors.grey,
+                            child: Text(
+                              equation,
+                              style: TextStyle(
+                                fontSize: equationFontSize,
+                                color: blackColor,
+                                //fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: screenHeight * .007,
+                          ),
+                          Container(
+                            width: screenWidth,
+                            height: 70,
+                            padding: EdgeInsets.only(right: screenWidth * .1),
+                            alignment: Alignment.centerRight,
+                            //color: Colors.grey,
+                            child: Text(
+                              result,
+                              style: TextStyle(
+                                fontSize: resultFontSize,
+                                color: blackColor,
+                                //fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            height: screenHeight * .03,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: screenWidth * .90,
+                                child: Table(
+                                  children: [
+                                    TableRow(children: [
+                                      Button("c", buttonSizev),
+                                      Button("%", buttonSizev),
+                                      Button("+-", buttonSizev),
+                                      Button("/", buttonSizev),
+                                    ]),
+                                    TableRow(children: [
+                                      Button("7", buttonSizev),
+                                      Button("8", buttonSizev),
+                                      Button("9", buttonSizev),
+                                      Button("x", buttonSizev),
+                                    ]),
+                                    TableRow(children: [
+                                      Button("4", buttonSizev),
+                                      Button("5", buttonSizev),
+                                      Button("6", buttonSizev),
+                                      Button("-", buttonSizev),
+                                    ]),
+                                    TableRow(children: [
+                                      Button("1", buttonSizev),
+                                      Button("2", buttonSizev),
+                                      Button("3", buttonSizev),
+                                      Button("+", buttonSizev),
+                                    ]),
+                                    TableRow(children: [
+                                      ButtonCon("", buttonSizev),
+                                      Button("0", buttonSizev),
+                                      Button(".", buttonSizev),
+                                      ButtonBon("", buttonSizev)
+                                    ]),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            height: screenHeight * .01,
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                ],
+                ),
               ),
-              Container(
-                height: screenHeight * .01,
-              )
-            ],
+            ),
           ),
         ),
       ),
@@ -260,7 +341,7 @@ class _homeCalState extends State<homeCal> {
         padding: const EdgeInsets.all(8.0),
         child: ElevatedButton(
           style: ButtonStyle(
-              //elevation: MaterialStateProperty.all(0),
+            //elevation: MaterialStateProperty.all(0),
               backgroundColor: MaterialStateProperty.all(blackColor)),
           onPressed: () => equalTo(),
           child: Text(
