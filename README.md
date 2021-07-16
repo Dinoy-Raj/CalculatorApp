@@ -13,6 +13,9 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 * You can choose dark/light theme
 
 ### Requirements
+- [x] Android Studio running on windows/mac os
+- [x] Flutter 2.0 or higher set up
+- [x] Android Phone/Emulator | Chrome/Edge | Desktop SetUp For Flutter [Read More] 
 
 ### Instalation
 
