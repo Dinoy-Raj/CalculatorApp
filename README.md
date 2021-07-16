@@ -11,3 +11,22 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 * Standard Operations (Addition, Multiplication.....etc 😉)
 * You can copy the result or formula to clipboard 
 * You can choose dark/light theme
+
+# Requirements
+
+# Instalation
+
+# Get It
+
+
+
+# Views
+
+# Contribute 
+
+
+
+
+
+
+# Reporting Security Issues
