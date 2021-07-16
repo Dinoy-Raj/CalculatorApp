@@ -36,4 +36,4 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 
 ### Reporting Any Issues 🧨
 
-Ping me <a href="dinoykraj@gmail.com">📧</a>
+Ping me <a mailto="dinoykraj@gmail.com">📧</a>
