@@ -15,11 +15,11 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
  <div></div>
 
 ### Requirements🎫
+###### for runing this code
 - [x] Android Studio running on windows/mac os
 - [x] Flutter 2.0 or higher set up
 - [x] Android Phone/Emulator | Chrome/Edge | Desktop SetUp For Flutter [ <a href="https://flutter.dev/desktop"> Read More </a>  👈 ] 
 
-### Instalation🖨
 
 ### Get It🎊
 
@@ -34,4 +34,6 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 
 
 
-### Reporting Security Issues 🧨
+### Reporting Any Issues 🧨
+
+Ping me ![gmail](https://img-premium.flaticon.com/png/512/542/premium/542689.png?token=exp=1626444783~hmac=bccfef5e340dace33f583f618a648e01)
