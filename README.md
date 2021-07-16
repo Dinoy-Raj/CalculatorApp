@@ -12,21 +12,21 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 * You can copy the result or formula to clipboard 
 * You can choose dark/light theme
 
-## Requirements
+### Requirements
 
-## Instalation
+### Instalation
 
-## Get It
-
-
-
-## Views
-
-## Contribute 
+### Get It
 
 
+
+### Views
+
+### Contribute 
 
 
 
 
-## Reporting Security Issues
+
+
+### Reporting Security Issues
