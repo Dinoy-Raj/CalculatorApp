@@ -33,6 +33,17 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 ## Views😳🤩
 
 
+<div align="center">
+  <img src="screenshots/android.png" width="1000">
+</div>
+---
+<div align="center">
+  <img src="screenshots/desktopapp.png" width="1000">
+</div>
+---
+<div align="center">
+  <img src="screenshots/web.png" width="1000">
+</div>
 
 ## Contribute ⚽
 
