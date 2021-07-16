@@ -7,26 +7,26 @@
 # MultiPlatformCalculator🧮
 a cross-platform Calculator app available as WebApp, Desktop App(Windows), Android App🎉.The app provides standard  calculator functionality, as well as it comes with dark and light mode .
 
-# Features✨
+## Features✨
 * Standard Operations (Addition, Multiplication.....etc 😉)
 * You can copy the result or formula to clipboard 
 * You can choose dark/light theme
 
-# Requirements
+## Requirements
 
-# Instalation
+## Instalation
 
-# Get It
-
-
-
-# Views
-
-# Contribute 
+## Get It
 
 
+
+## Views
+
+## Contribute 
 
 
 
 
-# Reporting Security Issues
+
+
+## Reporting Security Issues
