@@ -23,9 +23,9 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 
 ## Get It🎊
 
-##### android app
+##### android app [ **Get It On Amazon Store** ]
 
-##### web app 
+##### web app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Click Here To Use Web Version Of Calculator** ]</a>
 
 ##### desktop app
 
