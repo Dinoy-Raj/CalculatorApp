@@ -4,6 +4,7 @@
   <img src="screenshots/git1.png" width="1000">
 </div>
 
+###### made with <a href="https://flutter.dev/"> Flutter </a>
 # MultiPlatformCalculator🧮
 a cross-platform Calculator app available as WebApp, Desktop App(Windows), Android App🎉.The app provides standard  calculator functionality, as well as it comes with dark and light mode .
 
