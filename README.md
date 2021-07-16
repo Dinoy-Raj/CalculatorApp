@@ -27,7 +27,7 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 
 ##### web app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Click Here To Use Web Version Of Calculator** ]</a>  💻🖲
 
-##### desktop app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Click Here To Download Desktop App** ]</a>  💻🎨 
+##### desktop app <a href = "https://drive.google.com/file/d/1AGw5Tt-1wml2iyOtf7FdcZlb87khO5k-/view?usp=sharing">[ **Click Here To Download Desktop App** ]</a>  💻🎨 
 
 *(currently flutter doesnot recommend release of desktop app, so there may be some sort of errors which will not allow you to run app on your device)*
 
