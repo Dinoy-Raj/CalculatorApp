@@ -22,7 +22,7 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 
 
 ### Get It🎊
----
+--
 ##### android app
 
 ##### web app 
