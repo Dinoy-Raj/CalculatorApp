@@ -23,11 +23,11 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 
 ## Get It🎊
 
-##### android app [ **Get It On Amazon Store** ]
+##### android app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Get It On Amazon Store** ]</a> 📱🍎
 
-##### web app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Click Here To Use Web Version Of Calculator** ]</a>
+##### web app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Click Here To Use Web Version Of Calculator** ]</a>  💻🖲
 
-##### desktop app
+##### desktop app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Click Here To Download Desktop App** ]</a>  💻🎨 (currently flutter doesnot recommend release of desktop app, so there may be some sort of errors which will not allow you to run app on your device)
 
 
 ## Views😳🤩
