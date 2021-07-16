@@ -11,26 +11,26 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 * Standard Operations (Addition, Multiplication.....etc 😉)
 * You can copy the result or formula to clipboard 
 * You can choose dark/light theme
-* <div></div>
+ <div></div>
 
-### Requirements
+### Requirements🎫
 - [x] Android Studio running on windows/mac os
 - [x] Flutter 2.0 or higher set up
-- [x] Android Phone/Emulator | Chrome/Edge | Desktop SetUp For Flutter [Read More] 
+- [x] Android Phone/Emulator | Chrome/Edge | Desktop SetUp For Flutter [Read More 👈] 
 
-### Instalation
+### Instalation🖨
 
-### Get It
-
-
-
-### Views
-
-### Contribute 
+### Get It🎊
 
 
+
+### Views😳🤩
+
+### Contribute ⚽
 
 
 
 
-### Reporting Security Issues
+
+
+### Reporting Security Issues 🧨
