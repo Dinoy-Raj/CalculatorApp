@@ -24,7 +24,7 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 ## Get It🎊
 
 ##### android app <a href='//com-example-multicalculator.en.uptodown.com/android' title='Download Calculator by Dinoy' >
-                <img src='https://stc.utdstc.com/img/mediakit/download-aao-small.png' alt='Download Calculator by Dinoy'>
+                <img src='https://stc.utdstc.com/img/mediakit/download-gio-small.png' alt='Download Calculator by Dinoy'>
                 </a>
 
 ##### web app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Click Here To Use Web Version Of Calculator** ]</a>  💻🖲
@@ -32,6 +32,10 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 ##### desktop app <a href = "https://drive.google.com/drive/folders/1Cv86DYA0Swc5pqfJ5T1AefVkq-GbyYI9?usp=sharing">[ **Click Here To Download Desktop App** ]</a>  💻🎨 
 
 *(currently flutter doesnot recommend release of desktop app, so there may be some sort of errors which will not allow you to run app on your device-So i have included just release folder which contain several files ...try to run windocal.exe inside that folder hope it works ☺ )*
+
+<a href='//com-example-multicalculator.en.uptodown.com/android' title='Download Calculator by Dinoy' >
+                <img src='https://stc.utdstc.com/img/mediakit/download-gio-small.png' alt='Download Calculator by Dinoy'>
+                </a>
 
 
 ## Views😳🤩
