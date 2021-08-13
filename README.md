@@ -24,8 +24,8 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 ## Get It🎊
 
 ##### android app <a href='//com-example-multicalculator.en.uptodown.com/android' title='Download Calculator by Dinoy' >
-                <img src='https://stc.utdstc.com/img/mediakit/download-aao-big.png' alt='Download Calculator by Dinoy'>
-                </a> 📱🍎
+                <img src='https://stc.utdstc.com/img/mediakit/download-aao-small.png' alt='Download Calculator by Dinoy'>
+                </a>
 
 ##### web app <a href = "https://infallible-ardinghelli-7c18de.netlify.app/">[ **Click Here To Use Web Version Of Calculator** ]</a>  💻🖲
 
