@@ -56,5 +56,11 @@ a cross-platform Calculator app available as WebApp, Desktop App(Windows), Andro
 
 Feel free to submit issues and enhancement requests. 🤗
 
+## Feedback
+
+If you have any feedback, please reach out to us at dinoykraj@gmail.com.com
+
+
+
 
 
