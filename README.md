@@ -58,7 +58,3 @@ Feel free to submit issues and enhancement requests. 🤗
 
 
 
-
-## Reporting Any Issues 🧨
-
-Ping me <a href="mailto:dinoykraj@gmail.com">📧</a> <a href="https://wa.me/+917306185390">📞</a>
